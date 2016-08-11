@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ asset('/Layouts/assets/275786.ico') }}" type="image/x-icon">
+    <title>админ-панель</title>
+    {{ publishCss() }}
+
+    {{ publish('/Layouts/assets') }}
+
+    <link rel="stylesheet" href="{{ asset('/Layouts/assets/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="admin-alert">
+        <a href="/"><img src="{{ asset('/Layouts/assets/logo.jpg') }}"></a>
+
+        <a href="/">на главную</a>
+
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+{{ publishJs() }}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ asset('/Layouts/assets/275786.ico') }}" type="image/x-icon">
+    <title>новости</title>
+    {{ publishCss() }}
+
+    {{ publish('/Layouts/assets') }}
+
+    <link rel="stylesheet" href="{{ asset('/Layouts/assets/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <a href="/"><img src="{{ asset('/Layouts/assets/logo.jpg') }}"></a>
+            {% if app.user %}
+            Добро пожаловать, {{ app.user.firstName }} {{ app.user.lastName }}!
+            <br>
+            <a href="/user/logout.html">выход</a>
+            {% else %}
+            <a href="/">главная</a>
+            <a href="/news/default.html">новости</a>
+            <a href="/user/login.html">вход</a>
+            <a href="/user/register.html">регистрация</a>
+            {% endif %}
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {{ publishJs() }}
+</body>
+</html>

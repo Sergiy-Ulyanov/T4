@@ -1,0 +1,51 @@
+{% extends 'Index.html' %}
+
+{% block top_title %}
+    <title>Регистрация пользователей</title>
+{% endblock %}
+
+{% block content %}
+
+{% for error in errors %}
+<div class="alert alert-danger">
+    {{ error.getMessage() }}
+</div>
+{% endfor %}
+
+<div class="log">
+    <h1>
+        Регистрация
+    </h1>
+    <form class="form-horizontal" action="/user/register.html" method="post">
+        <div class="form-group">
+        <label for="register[firstName]" class="col-sm-4 control-label">Имя</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" id="register[firstName]" name="register[firstName]" placeholder="Имя">
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="register[lastName]" class="col-sm-4 control-label">Фамилия</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="register[lastName]" name="register[lastName]" placeholder="Фамилия">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="register[email]" class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" id="register[email]" name="register[email]" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="register[password]" class="col-sm-4 control-label">Пароль</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="register[password]" name="register[password]" placeholder="Пароль">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

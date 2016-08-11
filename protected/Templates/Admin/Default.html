@@ -1,0 +1,12 @@
+{% extends 'Admin.html' %}
+
+{% block content %}
+
+<div class="admin">
+    {% for user in users %}
+    <em><a href="/admin/one?id={{ user.pk }}"> {{ user.email }} </a></em>
+    <hr>
+    {% endfor %}
+</div>
+
+{% endblock %}

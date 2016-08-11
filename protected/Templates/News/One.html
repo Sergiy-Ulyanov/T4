@@ -1,0 +1,10 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+<h3>{{ article.title }}</h3>
+<article>{{ article.text }}</article>
+<address>{{ article.author }}</address>
+<address>{{ article.published }}</address>
+<hr>
+<a href="/">назад</a>
+{% endblock %}

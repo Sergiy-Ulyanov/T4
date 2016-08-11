@@ -1,0 +1,11 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+<div class="news">
+    <h1>Последняя новость</h1>
+    <h2>{{ article.title }}</h2>
+    <article>{{ article.text }}</article>
+    <address>{{ article.author }}</address>
+    <address>{{ article.published }}</address>
+</div>
+{% endblock %}

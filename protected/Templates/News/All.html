@@ -1,0 +1,10 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+<div class="news">
+    {% for article in news %}
+    <em><a href="/news/one?id={{ article.pk }}"> {{ article.title }} </a></em>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

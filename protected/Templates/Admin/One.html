@@ -1,0 +1,19 @@
+{% extends 'Admin.html' %}
+
+{% block content %}
+
+       <div class="admin">
+           <h1>
+               {{ user.firstName }}
+           </h1>
+           <h2>
+               {{ user.lastName }}
+           </h2>
+           <h3>
+               {{ user.email }}
+           </h3>
+           <br>
+           <a href="Default.html">к списку пользователей</a>
+       </div>
+
+{% endblock %}
